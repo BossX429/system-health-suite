@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Complete System Health Optimization Suite - Unified Integration
 .DESCRIPTION
@@ -50,9 +50,9 @@ function Test-AllScripts {
     $allValid = $true
     foreach ($script in $scripts) {
         if (Test-Path $script.Path) {
-            Write-Host "  ✓ $($script.Name)" -ForegroundColor Green
+            Write-Host "  [OK] $($script.Name)" -ForegroundColor Green
         } else {
-            Write-Host "  ✗ $($script.Name) - NOT FOUND" -ForegroundColor Red
+            Write-Host "  [FAIL] $($script.Name) - NOT FOUND" -ForegroundColor Red
             $allValid = $false
         }
     }
@@ -74,7 +74,7 @@ Write-Host ""
 # Validate scripts
 if (-not (Test-AllScripts)) {
     Write-Host ""
-    Write-Host "✗ Missing required scripts. Please ensure all scripts are in:" -ForegroundColor Red
+    Write-Host "[FAIL] Missing required scripts. Please ensure all scripts are in:" -ForegroundColor Red
     Write-Host "  $scriptPath" -ForegroundColor Red
     exit 1
 }
@@ -100,10 +100,10 @@ if ($Mode -in 'Full', 'Health') {
         & $mainScript
         $healthCheckComplete = $true
         Write-Host ""
-        Write-Host "✓ Health optimization completed successfully" -ForegroundColor Green
+        Write-Host "[OK] Health optimization completed successfully" -ForegroundColor Green
     } catch {
         Write-Host ""
-        Write-Host "✗ Health optimization failed: $_" -ForegroundColor Red
+        Write-Host "[FAIL] Health optimization failed: $_" -ForegroundColor Red
         $healthCheckComplete = $false
     }
 } else {
@@ -124,10 +124,10 @@ if ($EnableEnhancements -and $Mode -in 'Full', 'Health') {
     try {
         & $enhancedScript -EnableProcessAnalysis -EnableNetworkDiagnostics -EnableAntivirusCheck
         Write-Host ""
-        Write-Host "✓ Enhanced diagnostics completed" -ForegroundColor Green
+        Write-Host "[OK] Enhanced diagnostics completed" -ForegroundColor Green
     } catch {
         Write-Host ""
-        Write-Host "✗ Enhanced diagnostics failed: $_" -ForegroundColor Red
+        Write-Host "[FAIL] Enhanced diagnostics failed: $_" -ForegroundColor Red
     }
 }
 
@@ -146,10 +146,10 @@ if ($SendEmail -and $Mode -in 'Full', 'Email') {
         try {
             & $emailScript -SendAlert
             Write-Host ""
-            Write-Host "✓ Email alerts processed" -ForegroundColor Green
+            Write-Host "[OK] Email alerts processed" -ForegroundColor Green
         } catch {
             Write-Host ""
-            Write-Host "✗ Email alert failed: $_" -ForegroundColor Red
+            Write-Host "[FAIL] Email alert failed: $_" -ForegroundColor Red
         }
     } else {
         Write-Host "⚠ Email configuration not found" -ForegroundColor Yellow
@@ -171,10 +171,10 @@ if ($RunDashboard -or $Mode -eq 'Trends') {
     try {
         & $dashboardScript
         Write-Host ""
-        Write-Host "✓ Trends dashboard generated" -ForegroundColor Green
+        Write-Host "[OK] Trends dashboard generated" -ForegroundColor Green
     } catch {
         Write-Host ""
-        Write-Host "✗ Dashboard generation failed: $_" -ForegroundColor Red
+        Write-Host "[FAIL] Dashboard generation failed: $_" -ForegroundColor Red
     }
 }
 

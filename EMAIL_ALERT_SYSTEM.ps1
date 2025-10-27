@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Email Alert System for Health Optimization
 .DESCRIPTION
@@ -284,10 +284,10 @@ function Send-HealthAlert {
         }
         
         Send-MailMessage @mailParams
-        Write-Host "✓ Email sent successfully to: $ToEmail" -ForegroundColor Green
+        Write-Host "[OK] Email sent successfully to: $ToEmail" -ForegroundColor Green
         return $true
     } catch {
-        Write-Host "✗ Failed to send email: $_" -ForegroundColor Red
+        Write-Host "[FAIL] Failed to send email: $_" -ForegroundColor Red
         return $false
     }
 }
@@ -322,7 +322,7 @@ function Send-TestEmail {
 </head>
 <body>
     <div class="header">
-        <h1>✓ Test Email Successful!</h1>
+        <h1>[OK] Test Email Successful!</h1>
     </div>
     
     <div class="content">
@@ -382,10 +382,10 @@ function Initialize-EmailConfiguration {
     
     try {
         $config | ConvertTo-Json | Out-File -FilePath $configPath -Encoding UTF8 -Force
-        Write-Host "✓ Configuration saved to: $configPath" -ForegroundColor Green
+        Write-Host "[OK] Configuration saved to: $configPath" -ForegroundColor Green
         return $config
     } catch {
-        Write-Host "✗ Failed to save configuration: $_" -ForegroundColor Red
+        Write-Host "[FAIL] Failed to save configuration: $_" -ForegroundColor Red
         return $null
     }
 }

@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Health Trends Dashboard Generator
 .DESCRIPTION
@@ -24,12 +24,12 @@ Write-Host ""
 $reportDir = Split-Path $OutputPath
 if (-not (Test-Path $reportDir)) {
     New-Item -ItemType Directory -Path $reportDir -Force | Out-Null
-    Write-Host "✓ Created Reports directory" -ForegroundColor Green
+    Write-Host "[OK] Created Reports directory" -ForegroundColor Green
 }
 
 # Read CSV data
 if (-not (Test-Path $CsvPath)) {
-    Write-Host "✗ CSV file not found: $CsvPath" -ForegroundColor Red
+    Write-Host "[X] CSV file not found: $CsvPath" -ForegroundColor Red
     Write-Host "Run APPLY_HEALTH_OPTIMIZATION.ps1 first to generate trend data" -ForegroundColor Yellow
     exit 1
 }
@@ -37,9 +37,9 @@ if (-not (Test-Path $CsvPath)) {
 $trendData = @()
 try {
     $trendData = Import-Csv -Path $CsvPath
-    Write-Host "✓ Loaded $($trendData.Count) records from CSV" -ForegroundColor Green
+    Write-Host "[OK] Loaded $($trendData.Count) records from CSV" -ForegroundColor Green
 } catch {
-    Write-Host "✗ Failed to read CSV: $_" -ForegroundColor Red
+    Write-Host "[X] Failed to read CSV: $_" -ForegroundColor Red
     exit 1
 }
 
@@ -61,9 +61,9 @@ if ($trendData.Count -gt 0) {
         $last = [float]$scores[-1]
         $change = $last - $first
         
-        if ($change -gt 2) { $trendDirection = "Improving ↑" }
-        elseif ($change -lt -2) { $trendDirection = "Declining ↓" }
-        else { $trendDirection = "Stable →" }
+        if ($change -gt 2) { $trendDirection = "Improving (Up)" }
+        elseif ($change -lt -2) { $trendDirection = "Declining (Down)" }
+        else { $trendDirection = "Stable" }
     }
 }
 
@@ -272,7 +272,7 @@ $html = @"
             
             <div class="metric-card">
                 <h3>Trend</h3>
-                <div class="metric-value trend-$(($trendDirection -replace ' ↑|↓|→' | ForEach-Object {if ($_ -eq 'Improving') {'improving'} elseif ($_ -eq 'Declining') {'declining'} else {'stable'}}))" style="font-size: 1.8em;">$trendDirection</div>
+                <div class="metric-value trend-$(($trendDirection -replace ' [UP]|[DOWN]|[RIGHT]' | ForEach-Object {if ($_ -eq 'Improving') {'improving'} elseif ($_ -eq 'Declining') {'declining'} else {'stable'}}))" style="font-size: 1.8em;">$trendDirection</div>
                 <div class="metric-sub">Overall direction</div>
             </div>
         </div>
@@ -467,7 +467,7 @@ $html = @"
 # Save dashboard
 try {
     $html | Out-File -FilePath $OutputPath -Force -Encoding UTF8
-    Write-Host "✓ Dashboard generated successfully" -ForegroundColor Green
+    Write-Host "[OK] Dashboard generated successfully" -ForegroundColor Green
     Write-Host "  Location: $OutputPath" -ForegroundColor Cyan
     Write-Host ""
     Write-Host "Analytics Summary:" -ForegroundColor Yellow
@@ -477,7 +477,7 @@ try {
     Write-Host "  - Trend: $trendDirection" -ForegroundColor White
     Write-Host "  - Records: $($trendData.Count)" -ForegroundColor White
 } catch {
-    Write-Host "✗ Failed to save dashboard: $_" -ForegroundColor Red
+    Write-Host "[X] Failed to save dashboard: $_" -ForegroundColor Red
     exit 1
 }
 
