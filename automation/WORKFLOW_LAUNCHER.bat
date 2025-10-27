@@ -88,8 +88,8 @@ echo.
 echo ╔═══════════════════════════════════════════════════════════════════════╗
 echo ║ STEP 1: Setup Automation                                             ║
 echo ╚═══════════════════════════════════════════════════════════════════════╝
-if exist "SETUP_TASK_SCHEDULER_ADMIN.bat" (
-    call SETUP_TASK_SCHEDULER_ADMIN.bat
+if exist "automation\SETUP_TASK_SCHEDULER_ADMIN.bat" (
+    call automation\SETUP_TASK_SCHEDULER_ADMIN.bat
 ) else (
     echo Skipping - file not found
 )
@@ -98,8 +98,8 @@ echo.
 echo ╔═══════════════════════════════════════════════════════════════════════╗
 echo ║ STEP 2: Configure Email                                              ║
 echo ╚═══════════════════════════════════════════════════════════════════════╝
-if exist "EMAIL_SETUP.bat" (
-    call EMAIL_SETUP.bat
+if exist "automation\EMAIL_SETUP.bat" (
+    call automation\EMAIL_SETUP.bat
 ) else (
     echo Skipping - file not found
 )
@@ -108,8 +108,8 @@ echo.
 echo ╔═══════════════════════════════════════════════════════════════════════╗
 echo ║ STEP 3: Generate Baselines                                           ║
 echo ╚═══════════════════════════════════════════════════════════════════════╝
-if exist "GENERATE_BASELINES.bat" (
-    call GENERATE_BASELINES.bat
+if exist "automation\GENERATE_BASELINES.bat" (
+    call automation\GENERATE_BASELINES.bat
 ) else (
     echo Skipping - file not found
 )
@@ -118,8 +118,8 @@ echo.
 echo ╔═══════════════════════════════════════════════════════════════════════╗
 echo ║ STEP 4: Full Integration Test                                        ║
 echo ╚═══════════════════════════════════════════════════════════════════════╝
-if exist "FULL_TEST.bat" (
-    call FULL_TEST.bat
+if exist "automation\FULL_TEST.bat" (
+    call automation\FULL_TEST.bat
 ) else (
     echo Skipping - file not found
 )
@@ -128,8 +128,8 @@ echo.
 echo ╔═══════════════════════════════════════════════════════════════════════╗
 echo ║ STEP 5: View Dashboard                                               ║
 echo ╚═══════════════════════════════════════════════════════════════════════╝
-if exist "VIEW_DASHBOARD.bat" (
-    call VIEW_DASHBOARD.bat
+if exist "automation\VIEW_DASHBOARD.bat" (
+    call automation\VIEW_DASHBOARD.bat
 ) else (
     echo Skipping - file not found
 )
@@ -138,8 +138,8 @@ echo.
 echo ╔═══════════════════════════════════════════════════════════════════════╗
 echo ║ STEP 6: Review Documentation                                         ║
 echo ╚═══════════════════════════════════════════════════════════════════════╝
-if exist "OPEN_DOCS.bat" (
-    call OPEN_DOCS.bat
+if exist "automation\OPEN_DOCS.bat" (
+    call automation\OPEN_DOCS.bat
 ) else (
     echo Skipping - file not found
 )
@@ -212,7 +212,7 @@ echo ═════════════════════════
 echo.
 
 powershell -ExecutionPolicy Bypass -Command ^
-    "& '.\APPLY_HEALTH_OPTIMIZATION.ps1' -DryRun -ShowSummary"
+    "& 'scripts\APPLY_HEALTH_OPTIMIZATION.ps1' -DryRun -ShowSummary"
 
 echo.
 pause
