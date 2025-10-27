@@ -1,0 +1,5 @@
+"Timestamp","ComputerName","OverallScore","Status","CPUHealth","MemoryHealth","DiskHealth","ServicesHealth","CriticalIssues","Warnings"
+"2025-10-26 16:45:53","THEONE","83","System.Object[]","22","19","22","20","0","1"
+"2025-10-26 16:46:38","THEONE","79","System.Object[]","18","19","22","20","0","1"
+"2025-10-26 16:46:39","THEONE","78","System.Object[]","17","19","22","20","0","1"
+"2025-10-26 16:46:57","THEONE","81","System.Object[]","20","19","22","20","0","1"

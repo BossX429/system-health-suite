@@ -1,0 +1,391 @@
+═══════════════════════════════════════════════════════════════════════════════
+                           FILE INDEX & QUICK REFERENCE
+═══════════════════════════════════════════════════════════════════════════════
+
+LOCATION: c:\Operation_Token_Discount_Archive\3_SCRIPTS_AND_SETUP\
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 WHICH FILE SHOULD I USE?
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│  STEP 1: Unsure what to do?                                                │
+│  ▸ Open: START_HERE.txt                                                    │
+│  ▸ Contains: Visual quick-start guide with clear next steps                │
+│                                                                              │
+│  STEP 2: Ready to deploy?                                                  │
+│  ▸ Double-click: WORKFLOW_LAUNCHER.bat                                    │
+│  ▸ Select: [A] Auto-Run All 6 Steps                                        │
+│  ▸ Wait: ~36 minutes for automatic deployment                              │
+│                                                                              │
+│  STEP 3: Want to understand the system?                                    │
+│  ▸ Read: README.md (400+ lines, comprehensive)                            │
+│  ▸ Read: QUICK_REFERENCE.txt (1 page, quick start)                        │
+│                                                                              │
+│  STEP 4: Need complete command reference?                                  │
+│  ▸ Read: MASTER_COMMAND_REFERENCE.md (500+ lines)                         │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📂 ORGANIZED FILE LISTING
+
+LAUNCHERS (Double-click to run):
+───────────────────────────────────────────────────────────────────────────────
+  WORKFLOW_LAUNCHER.bat              ← START HERE (main menu)
+  SETUP_TASK_SCHEDULER_ADMIN.bat     ← Step 1: Setup automation
+  EMAIL_SETUP.bat                    ← Step 2: Configure email
+  GENERATE_BASELINES.bat             ← Step 3: Generate trend data
+  FULL_TEST.bat                      ← Step 4: Integration test
+  VIEW_DASHBOARD.bat                 ← Step 5: View visualizations
+  OPEN_DOCS.bat                      ← Step 6: Review documentation
+  SETUP_AUTOMATION.bat               (legacy - use WORKFLOW_LAUNCHER.bat)
+
+GUIDES & DOCUMENTATION (Open with notepad/VS Code):
+───────────────────────────────────────────────────────────────────────────────
+  START_HERE.txt                     ← 🎯 Visual quick-start (read first!)
+  QUICK_REFERENCE.txt                ← 1-page quick reference
+  README.md                          ← 400+ line comprehensive guide
+  MASTER_COMMAND_REFERENCE.md        ← 500+ line complete reference
+  WORKFLOW_COMPLETE.md               ← Detailed 6-step workflow guide
+  DEPLOYMENT_PACKAGE_COMPLETE.txt    ← Complete deployment summary
+  FILE_INDEX.txt                     ← This file (you are here)
+
+PROJECT DOCUMENTATION:
+───────────────────────────────────────────────────────────────────────────────
+  IMPLEMENTATION_COMPLETE.md         ← Project completion summary
+  DEPLOYMENT_SUMMARY.md              ← Deployment notes
+  PROJECT_SUMMARY.txt                ← Feature overview
+  NEXT_STEPS.md                      ← Workflow options (completed)
+  BUGFIX_SUMMARY.md                  ← Bug resolution log
+
+CORE SCRIPTS (Run via launchers, not directly):
+───────────────────────────────────────────────────────────────────────────────
+  APPLY_HEALTH_OPTIMIZATION.ps1      ← Core engine (600+ lines)
+  EMAIL_ALERT_SYSTEM.ps1             ← Email alerts (350+ lines)
+  ENHANCED_FEATURES.ps1              ← Advanced diagnostics (300+ lines)
+  GENERATE_DASHBOARD.ps1             ← Visualization (400+ lines)
+  SETUP_TASK_SCHEDULER.ps1           ← Task scheduling (200+ lines)
+  UNIFIED_INTEGRATION.ps1            ← Master orchestrator (300+ lines)
+
+CONFIGURATION (Auto-generated):
+───────────────────────────────────────────────────────────────────────────────
+  HealthOptimization.config.json     (created during setup)
+  email.config.json                  (created during email setup)
+
+GENERATED REPORTS (Auto-created):
+───────────────────────────────────────────────────────────────────────────────
+  Reports/
+  ├─ HealthReport_*.html             (12+ detailed HTML reports)
+  ├─ HealthDashboard.html            (interactive trends dashboard)
+  └─ HealthTrends.csv                (CSV trend data for analysis)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 FILE PURPOSES EXPLAINED
+
+WORKFLOW_LAUNCHER.bat (✓ USE THIS FIRST)
+  Purpose: Main control center with interactive menu
+  Contains: All 6 deployment steps + utilities
+  How to use: Double-click, select option from menu
+  Time: 5-10 seconds to load menu
+
+START_HERE.txt
+  Purpose: Visual quick-start guide
+  Best for: First-time users needing overview
+  Contains: ASCII formatted instructions with clear flow
+  Read time: 5 minutes
+
+QUICK_REFERENCE.txt
+  Purpose: 1-page command reference
+  Best for: Quick lookups, common commands
+  Contains: Key commands and usage examples
+  Read time: 2-3 minutes
+
+README.md
+  Purpose: Comprehensive usage guide
+  Best for: Understanding all features
+  Contains: 400+ lines of detailed documentation
+  Read time: 15-20 minutes
+
+MASTER_COMMAND_REFERENCE.md
+  Purpose: Complete command reference
+  Best for: Advanced users, scripting
+  Contains: All available commands and parameters
+  Read time: 20-30 minutes
+
+WORKFLOW_COMPLETE.md
+  Purpose: Detailed 6-step workflow guide
+  Best for: Understanding deployment process
+  Contains: Step-by-step instructions with explanations
+  Read time: 15 minutes
+
+APPLY_HEALTH_OPTIMIZATION.ps1
+  Purpose: Core health analysis and optimization
+  Features: Scoring, issue detection, optimization, reporting
+  Size: 600+ lines
+  Language: PowerShell 5.0+
+
+EMAIL_ALERT_SYSTEM.ps1
+  Purpose: SMTP email notifications
+  Features: Configuration, alert templates, delivery
+  Size: 350+ lines
+  Requires: Email account (Gmail, Office365, etc.)
+
+ENHANCED_FEATURES.ps1
+  Purpose: Advanced system diagnostics
+  Features: Process analysis, network tests, antivirus check
+  Size: 300+ lines
+  Language: PowerShell 5.0+
+
+GENERATE_DASHBOARD.ps1
+  Purpose: Interactive trend visualization
+  Features: Chart.js integration, HTML generation
+  Size: 400+ lines
+  Output: Reports\HealthDashboard.html
+
+SETUP_TASK_SCHEDULER.ps1
+  Purpose: Windows Task Scheduler integration
+  Features: Schedule creation, admin checks
+  Size: 200+ lines
+  Requires: Administrator privileges
+
+UNIFIED_INTEGRATION.ps1
+  Purpose: Master orchestrator
+  Features: Combines all components, multi-mode execution
+  Size: 300+ lines
+  Modes: Full, Health, Email, Trends
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚀 QUICK START PATHS
+
+PATH A: RECOMMENDED (Fully Automated)
+────────────────────────────────────────────────────────────────────────────────
+1. Double-click: WORKFLOW_LAUNCHER.bat
+2. Select: [A] Auto-Run All 6 Steps
+3. Wait: ~36 minutes
+4. Done! System is deployed
+
+Result: Complete system configured and running
+
+────────────────────────────────────────────────────────────────────────────────
+
+PATH B: STEP-BY-STEP (More Control)
+────────────────────────────────────────────────────────────────────────────────
+1. Double-click: WORKFLOW_LAUNCHER.bat
+2. Select: [1] Setup Automation
+3. Wait for completion
+4. Select: [2] Configure Email
+5. Wait for completion
+6. Continue with [3], [4], [5], [6]
+
+Result: Same as Path A, but you control pacing
+
+────────────────────────────────────────────────────────────────────────────────
+
+PATH C: MANUAL INDIVIDUAL STEPS (Advanced)
+────────────────────────────────────────────────────────────────────────────────
+1. Right-click: SETUP_TASK_SCHEDULER_ADMIN.bat → Run as Administrator
+2. Double-click: EMAIL_SETUP.bat
+3. Double-click: GENERATE_BASELINES.bat
+4. Double-click: FULL_TEST.bat
+5. Double-click: VIEW_DASHBOARD.bat
+6. Double-click: OPEN_DOCS.bat
+
+Result: Same as Path A, maximum control
+
+────────────────────────────────────────────────────────────────────────────────
+
+PATH D: QUICK REFERENCE ONLY (No Deployment)
+────────────────────────────────────────────────────────────────────────────────
+1. Open: QUICK_REFERENCE.txt (or START_HERE.txt)
+2. Open: README.md
+3. Open: MASTER_COMMAND_REFERENCE.md
+4. Review documentation
+5. Run commands manually as needed
+
+Result: Documentation only, no automatic setup
+
+════════════════════════════════════════════════════════════════════════════════
+
+🎯 CHOOSE YOUR NEXT ACTION:
+
+Question: What do you want to do?
+
+Option A: Deploy the system automatically (RECOMMENDED)
+  ▸ Double-click: WORKFLOW_LAUNCHER.bat
+  ▸ Select: [A]
+  ▸ Come back in 36 minutes
+
+Option B: Understand what this does first
+  ▸ Open: START_HERE.txt (visual guide)
+  ▸ Or: QUICK_REFERENCE.txt (quick commands)
+  ▸ Or: README.md (comprehensive guide)
+
+Option C: I have questions
+  ▸ See: WORKFLOW_COMPLETE.md (detailed explanation)
+  ▸ See: MASTER_COMMAND_REFERENCE.md (all commands)
+  ▸ Run: WORKFLOW_LAUNCHER.bat → [S] (instant status)
+
+Option D: Just want the dashboard
+  ▸ Run: WORKFLOW_LAUNCHER.bat → [5]
+  ▸ (Requires prior deployment with data)
+
+════════════════════════════════════════════════════════════════════════════════
+
+📋 MENU COMMANDS IN WORKFLOW_LAUNCHER.BAT:
+
+When you run WORKFLOW_LAUNCHER.bat, you see this menu:
+
+[A] Auto-Run All 6 Steps
+    Runs all 6 steps automatically in sequence (~36 minutes)
+
+[1] Setup Automation
+    Configure Windows Task Scheduler for weekly health checks
+
+[2] Configure Email
+    Setup SMTP email alerts for critical issues
+
+[3] Generate Baselines
+    Collect 5 health snapshots for trend analysis
+
+[4] Full Integration Test
+    Verify all systems working together
+
+[5] View Dashboard
+    Open interactive health visualization
+
+[6] Review Documentation
+    Access all documentation and guides
+
+[S] Show System Status
+    Get instant health check of current system
+
+[T] Check Task Scheduler
+    Verify automation is configured and running
+
+[L] View Latest Report
+    Display most recent HTML health report
+
+[Q] Quit
+    Exit the menu
+
+════════════════════════════════════════════════════════════════════════════════
+
+✅ SUCCESS INDICATORS:
+
+After Step 1 (Setup Automation):
+  ✓ Windows Task Scheduler shows "HealthOptimization" job
+  ✓ Task scheduled for Monday 2:00 AM weekly
+
+After Step 2 (Configure Email):
+  ✓ email.config.json created with your settings
+  ✓ Test email successfully sent
+
+After Step 3 (Generate Baselines):
+  ✓ 5 new CSV records added to HealthTrends.csv
+  ✓ No errors during collection
+
+After Step 4 (Full Test):
+  ✓ All scripts complete without errors
+  ✓ New HTML report generated
+  ✓ Dashboard updated with latest data
+
+After Step 5 (View Dashboard):
+  ✓ Dashboard opens in browser
+  ✓ Charts show trend data
+  ✓ No JavaScript errors in console
+
+After Step 6 (Review Documentation):
+  ✓ Documentation files opened
+  ✓ You understand system capabilities
+
+════════════════════════════════════════════════════════════════════════════════
+
+💾 BACKUP IMPORTANT FILES:
+
+Before deploying, consider backing up:
+  • email.config.json (contains your email settings)
+  • Reports/HealthTrends.csv (historical trend data)
+
+After deployment, backup these periodically:
+  • Reports/HealthTrends.csv (30-day trend history)
+  • HealthOptimization.config.json (your settings)
+
+════════════════════════════════════════════════════════════════════════════════
+
+🔧 TROUBLESHOOTING GUIDE:
+
+"Admin privileges required" error
+  → Right-click batch file and select "Run as Administrator"
+
+"Task Scheduler not updating"
+  → Run: WORKFLOW_LAUNCHER.bat → [T] to check status
+  → Verify Task Scheduler service is running
+
+"Email won't send"
+  → Check SMTP server address is correct
+  → For Gmail: Use App-specific password, not regular password
+  → Run: WORKFLOW_LAUNCHER.bat to reconfigure
+
+"Dashboard shows no data"
+  → Run GENERATE_BASELINES.bat first
+  → Then run FULL_TEST.bat
+  → Then open dashboard again
+
+"Need to start over"
+  → Delete: HealthOptimization.config.json
+  → Delete: email.config.json
+  → Run: WORKFLOW_LAUNCHER.bat [A] again
+
+════════════════════════════════════════════════════════════════════════════════
+
+📞 GET HELP:
+
+For quick answers:
+  1. Check: START_HERE.txt
+  2. Check: QUICK_REFERENCE.txt
+  3. Check: README.md
+
+For detailed help:
+  1. Check: MASTER_COMMAND_REFERENCE.md
+  2. Check: WORKFLOW_COMPLETE.md
+  3. Run: WORKFLOW_LAUNCHER.bat → [S] (status check)
+
+════════════════════════════════════════════════════════════════════════════════
+
+✨ WHAT YOU GET:
+
+✓ Automated weekly health checks (Monday 2:00 AM)
+✓ Email alerts for critical system issues
+✓ Interactive dashboard with trend visualization
+✓ CSV trend data for 30-day history
+✓ Detailed HTML reports
+✓ Advanced diagnostics (process, network, antivirus)
+✓ Safe parameter verification
+✓ Bottleneck identification
+✓ Optimization recommendations
+✓ Action item generation
+✓ Complete documentation (1,500+ lines)
+✓ Easy-to-use batch file launchers
+
+════════════════════════════════════════════════════════════════════════════════
+
+🎯 RECOMMENDED NEXT STEP:
+
+Double-click: WORKFLOW_LAUNCHER.bat
+
+Then select: [A] Auto-Run All 6 Steps
+
+That's all you need to do!
+
+════════════════════════════════════════════════════════════════════════════════
+
+Last Updated: Today
+Status: ✅ Ready to Deploy
+Location: c:\Operation_Token_Discount_Archive\3_SCRIPTS_AND_SETUP\
+
+════════════════════════════════════════════════════════════════════════════════
